@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53fb1187-6a8b-481e-ba39-3e2dfcab7504" name="변경" comment="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가" />
+    <list default="true" id="53fb1187-6a8b-481e-ba39-3e2dfcab7504" name="변경" comment="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가">
+      <change afterPath="$PROJECT_DIR$/gukgeon/repetition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gukgeon/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gukgeon/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gukgeon/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gukgeon/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gukgeon/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gukgeon/gukgeon.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gukgeon/src/a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/TimerExample$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/TimerExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unizun/the_two_note_law.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/the_two_note_law.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,12 +41,12 @@
     &quot;assignee&quot;: &quot;MinFe4990&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/JaS-JavaStudy/wordRelay.git",
-    "accountId": "d72cbdbb-7104-4aef-9997-2e934963f596"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JaS-JavaStudy/wordRelay.git&quot;,
+    &quot;accountId&quot;: &quot;d72cbdbb-7104-4aef-9997-2e934963f596&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -50,19 +65,21 @@
     "Application.TimerExample (4).executor": "Run",
     "Application.TimerExample.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "time__check",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "gukgeon",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SSAFY/Desktop/jaeeun/my_study/jas/wordRelay/jaeeun",
+    "last_opened_file_path": "C:/Users/SSAFY/Desktop/practice_folder/wordRelay/jaeeun",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+    "vue.rearranger.settings.migration": "true",
+    "애플리케이션.WordTimer.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Example">
+  <component name="RunManager" selected="애플리케이션.WordTimer">
     <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="wordTimer.Example" />
       <module name="jaeeun" />
@@ -169,11 +186,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Example" />
-        <item itemvalue="Application.WordTimer" />
-        <item itemvalue="Application.WordTimer" />
-        <item itemvalue="Application.WordTimer" />
-        <item itemvalue="Application.WordTimer" />
+        <item itemvalue="애플리케이션.WordTimer" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +209,8 @@
       <workItem from="1729562767811" duration="72000" />
       <workItem from="1729816425668" duration="98000" />
       <workItem from="1729818231366" duration="1794000" />
+      <workItem from="1729841420922" duration="433000" />
+      <workItem from="1729841872244" duration="796000" />
     </task>
     <task id="LOCAL-00001" summary="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가">
       <option name="closed" value="true" />
