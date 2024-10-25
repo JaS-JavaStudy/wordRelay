@@ -32,7 +32,7 @@ public class main {
             System.out.print(playerList[turn] + "(" + points[turn] + ") 님의 차례: ");
             String word = sc.nextLine();
             int var10001;
-            if (before.equals("")) {
+            if (before.isEmpty()) {
                 // 첫 문자를 입력했을 때,
                 if (!api.validcheck(word)) {
                     var10001 = turn;
