@@ -1,7 +1,4 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
+package useApi;//
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -13,6 +10,7 @@ import org.w3c.dom.NodeList;
 public class GetApi {
     private final String key = myapi.clientId;
     private String url ="";
+
     private void resetUrl(String word){
         url = "https://opendict.korean.go.kr/api/search?certkey_no=6977";
         url += "&key=" + key;
@@ -72,11 +70,18 @@ public class GetApi {
             } else {
                 return true;
             }
+
         } catch (Exception var10) {
             Exception e = var10;
             e.printStackTrace();
             return false;
         }
+    }
+    public boolean validcheck(String word) {
+        if (isWordExist(word) && isNextWordExist(String.valueOf(word.charAt(word.length()-1)))){
+            return true;
+        }
+        return false;
     }
     public String getValue(String tag, Element element) {
         NodeList nl = element.getElementsByTagName(tag).item(0).getChildNodes();
