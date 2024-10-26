@@ -5,23 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53fb1187-6a8b-481e-ba39-3e2dfcab7504" name="변경" comment="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가">
-
-      <change afterPath="$PROJECT_DIR$/gukgeon/repetition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gukgeon/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gukgeon/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gukgeon/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gukgeon/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gukgeon/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gukgeon/gukgeon.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gukgeon/src/a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/gukgeon/repetition.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/TimerExample$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/TimerExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/unizun/the_two_note_law.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/the_two_note_law.java" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/Example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/WordTimer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/WordTimer.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -71,7 +66,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "gukgeon",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SSAFY/Desktop/practice_folder/wordRelay/jaeeun",
+    "last_opened_file_path": "C:/Users/Gukgeon/Desktop/practice_folder/wordRelay/jaeeun",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,7 +74,8 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.group.appearance",
     "vue.rearranger.settings.migration": "true",
-    "애플리케이션.Example.executor": "Run"
+    "애플리케이션.Example.executor": "Run",
+    "애플리케이션.main.executor": "Run"
   }
 }]]></component>
   <component name="RunManager" selected="애플리케이션.main">
@@ -183,6 +179,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="애플리케이션.main" />
         <item itemvalue="애플리케이션.WordTimer" />
       </list>
     </recent_temporary>
@@ -207,6 +204,7 @@
       <workItem from="1729816425668" duration="98000" />
       <workItem from="1729818231366" duration="1794000" />
       <workItem from="1729839895378" duration="1544000" />
+      <workItem from="1729927540398" duration="1066000" />
     </task>
     <task id="LOCAL-00001" summary="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가">
       <option name="closed" value="true" />

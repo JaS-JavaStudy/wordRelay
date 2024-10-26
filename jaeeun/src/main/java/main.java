@@ -3,6 +3,7 @@
 // (powered by FernFlower decompiler)
 
 import useApi.GetApi;
+import repetition.Repetition;
 
 import java.util.Scanner;
 
