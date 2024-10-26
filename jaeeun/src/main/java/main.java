@@ -1,8 +1,9 @@
 //
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
-//
+
 import useApi.GetApi;
+
 import java.util.Scanner;
 
 public class main {
@@ -10,8 +11,6 @@ public class main {
     static String before;
     static int turn;
 
-    public main() {
-    }
 
     public static void main(String[] args) {
         System.out.print("사용자의 수를 입력해주세요: ");
@@ -35,6 +34,7 @@ public class main {
             if (before.isEmpty()) {
                 // 첫 문자를 입력했을 때,
                 if (!api.validcheck(word)) {
+
                     var10001 = turn;
                     points[var10001] -= 10;
                     break;
@@ -46,7 +46,7 @@ public class main {
             } else {
                 boolean isVaild = validCheck(word);
 
-                if (!isVaild ) {
+                if (!isVaild) {
                     System.out.println(playerList[turn] + "님 오답을 입력하셨습니다!");
                     var10001 = turn;
                     points[var10001] -= 10;
@@ -82,6 +82,7 @@ public class main {
         int before_len = before.length();
         GetApi myword = new GetApi();
         return word.charAt(0) == before.charAt(before_len - 1) && myword.validcheck(word);
+
     }
 
     private static void findWinner(int playerNum, String[] playerList, int[] points) {
