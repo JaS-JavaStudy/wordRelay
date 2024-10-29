@@ -3,6 +3,7 @@
 // (powered by FernFlower decompiler)
 
 import useApi.GetApi;
+import wordTimer.WordTimer;
 
 import java.util.Scanner;
 
@@ -10,6 +11,9 @@ public class main {
     static Scanner sc;
     static String before;
     static int turn;
+    static GetApi api = new GetApi();
+
+    static WordTimer wordTimer = new WordTimer();
 
 
     public static void main(String[] args) {
@@ -20,7 +24,6 @@ public class main {
         String[] playerList = setPlayer(playerNum);
 
 
-        GetApi api = new GetApi();
 
         while(true) {
             if (turn == playerNum) {
@@ -29,12 +32,19 @@ public class main {
 
             System.out.println();
             System.out.print(playerList[turn] + "(" + points[turn] + ") 님의 차례: ");
+//            wordTimer.startTimer();     // 타이머 호출
             String word = sc.nextLine();
+//            if (word.equals("")) {
+                /* 타임아웃 시나리오 메소드 호출 */
+//                break;
+//            } else {
+//                wordTimer.setInput(true);
+//            }
             int var10001;
             if (before.isEmpty()) {
                 // 첫 문자를 입력했을 때,
-                if (!api.validcheck(word)) {
-
+                System.out.println(word);
+                if (!api.validcheck(word)) {        // 유효성검사
                     var10001 = turn;
                     points[var10001] -= 10;
                     break;
@@ -46,7 +56,16 @@ public class main {
             } else {
                 boolean isVaild = validCheck(word);
 
-                if (!isVaild) {
+                /*
+                 * 여기에요
+                 * 여기에요
+                 * 여기에요
+                 * 여기에요
+                 * 여기에요
+                 * 여기에요
+                 * 여기에요
+                 */
+                if (!isVaild) { // 여기에 유효성 추가
                     System.out.println(playerList[turn] + "님 오답을 입력하셨습니다!");
                     var10001 = turn;
                     points[var10001] -= 10;

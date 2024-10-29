@@ -27,6 +27,7 @@ public class WordTimer {
                         timer.cancel();
                     } else {
                         System.out.println("🕒남은 시간: " + seconds);
+                        System.out.println();
                     }
                 }
             }
