@@ -45,7 +45,15 @@ public class main {
                 points[turn] += word.length();
             } else {
                 boolean isValid = validCheck(word);
-
+                /*
+                *
+                *
+                * 여기얌 ㅋ
+                *
+                *
+                *
+                *
+                */
                 if (!isValid) {
                     System.out.println(playerList[turn] + "님 오답을 입력하셨습니다!");
                     points[turn] -= 10;

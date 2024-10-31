@@ -79,7 +79,7 @@
     &quot;애플리케이션.Example.executor&quot;: &quot;Run&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="애플리케이션.Example">
     <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="wordTimer.Example" />
       <module name="jaeeun" />
@@ -178,15 +178,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.main" />
-        <item itemvalue="Application.WordTimer" />
-        <item itemvalue="Application.TimerExample (3)" />
-        <item itemvalue="Application.TimerExample (2)" />
-        <item itemvalue="Application.Example" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
