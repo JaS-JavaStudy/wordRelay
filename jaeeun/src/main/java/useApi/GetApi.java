@@ -1,5 +1,7 @@
 package useApi;//
 
+import two_note.*;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
@@ -10,6 +12,7 @@ import org.w3c.dom.NodeList;
 public class GetApi {
     private final String key = myapi.clientId;
     private String url ="";
+    private two_node twoNode = new two_node();
 
     private void resetUrl(String word){
         url = "https://opendict.korean.go.kr/api/search?certkey_no=6977";
@@ -78,9 +81,22 @@ public class GetApi {
         }
     }
     public boolean validcheck(String word) {
-        if (isWordExist(word) && isNextWordExist(String.valueOf(word.charAt(word.length()-1)))){
-            return true;
+        char twoMelody=twoNode.forApi(word.charAt(word.length()-1));;
+        // 만일 받아온 값이 그대로면 두음법칙 없다. 다르면 두음법칙 있다.
+        System.out.println(twoMelody);
+        System.out.println(word.charAt(word.length()-1));
+        if (twoMelody==word.charAt(word.length()-1)){
+            // 없으면 그대로
+            if (isWordExist(word) && isNextWordExist(String.valueOf(word.charAt(word.length()-1)))){
+                return true;
+            }
+        }else{
+            // 있으면 두음법칙을 한 값 또는 그냥 값 둘다 확인.
+            if (isWordExist(word) && (isNextWordExist(String.valueOf(word.charAt(word.length()-1))) || isNextWordExist(String.valueOf(twoMelody))) ){
+                return true;
+            }
         }
+
         return false;
     }
     public String getValue(String tag, Element element) {

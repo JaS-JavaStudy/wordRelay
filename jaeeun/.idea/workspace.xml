@@ -4,19 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53fb1187-6a8b-481e-ba39-3e2dfcab7504" name="변경" comment="24.10.29 [기능 병합]&#10;&#10;1. api 정상작동 확인&#10;2. 타이머 기능 수정 필요">
+    <list default="true" id="106c8432-9816-4867-9c72-41c3990216e8" name="변경" comment="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/two_note/two_node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/two_note/two_node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/useApi/GetApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useApi/GetApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repetition/Repetition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repetition/Repetition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/the_two_note_law.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/useApi/GetApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/useApi/GetApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/useApi/myapi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/useApi/myapi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/Example.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wordTimer/Example.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/WordTimer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wordTimer/WordTimer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/WordTimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wordTimer/WordTimer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -26,69 +32,41 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;MinFe4990&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MinFe4990"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/JaS-JavaStudy/wordRelay.git&quot;,
-    &quot;accountId&quot;: &quot;d72cbdbb-7104-4aef-9997-2e934963f596&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/JaS-JavaStudy/wordRelay.git",
+    "accountId": "3654d7e3-c408-4ab3-94ed-fe4f2a7768c5"
   }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2njsEPGz6ug3IFXDBtU94lr0HoH" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2oCAS25AJUzq0MBmZIimma3MINL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Example.executor": "Run",
-    "Application.Test.executor": "Run",
-    "Application.TimerExample (1).executor": "Run",
-    "Application.TimerExample (2).executor": "Run",
-    "Application.TimerExample (3).executor": "Run",
-    "Application.TimerExample (4).executor": "Run",
-    "Application.TimerExample.executor": "Run",
-    "Application.main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "gukgeon",
+    "git-widget-placeholder": "develop__newapi",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SSAFY/Desktop/practice_folder/wordRelay/jaeeun",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true",
-    "애플리케이션.Example.executor": "Run",
     "애플리케이션.main.executor": "Run"
   }
-    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wordTimer.Example" />
-      <module name="jaeeun" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="wordTimer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}]]></component>
+  <component name="RunManager" selected="애플리케이션.main">
     <configuration name="TimerExample (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="wordTimer.TimerExample" />
       <module name="jaeeun" />
@@ -115,34 +93,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordTimer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wordTimer.WordTimer" />
-      <module name="jaeeun" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="wordTimer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WordTimer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wordTimer.WordTimer" />
-      <module name="jaeeun" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="wordTimer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WordTimer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wordTimer.WordTimer" />
+    <configuration name="TimerExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="wordTimer.TimerExample" />
       <module name="jaeeun" />
       <extension name="coverage">
         <pattern>
@@ -176,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="애플리케이션.main" />
         <item itemvalue="애플리케이션.WordTimer" />
         <item itemvalue="애플리케이션.TimerExample (3)" />
         <item itemvalue="애플리케이션.TimerExample (2)" />
-        <item itemvalue="애플리케이션.main" />
-        <item itemvalue="애플리케이션.Example" />
+        <item itemvalue="애플리케이션.TimerExample" />
       </list>
     </recent_temporary>
   </component>
@@ -195,67 +147,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="53fb1187-6a8b-481e-ba39-3e2dfcab7504" name="변경" comment="" />
-      <created>1729497707386</created>
+      <changelist id="106c8432-9816-4867-9c72-41c3990216e8" name="변경" comment="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가" />
+      <created>1730363180501</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1729497707386</updated>
-      <workItem from="1729562767811" duration="72000" />
-      <workItem from="1729816425668" duration="98000" />
-      <workItem from="1729818231366" duration="1794000" />
-      <workItem from="1729839895378" duration="1544000" />
-      <workItem from="1729916335284" duration="2128000" />
-      <workItem from="1730206021879" duration="794000" />
-      <workItem from="1730286951946" duration="1829000" />
-      <workItem from="1730352819802" duration="427000" />
-      <workItem from="1730353253941" duration="36000" />
-      <workItem from="1730353494385" duration="1811000" />
-      <workItem from="1730356650644" duration="1528000" />
+      <updated>1730363180501</updated>
+      <workItem from="1730363181786" duration="697000" />
     </task>
-    <task id="LOCAL-00001" summary="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가">
-      <option name="closed" value="true" />
-      <created>1729820009920</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1729820009920</updated>
-    </task>
-    <task id="LOCAL-00002" summary="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가">
-      <option name="closed" value="true" />
-      <created>1729820014166</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1729820014166</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="gukgeon" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가" />
