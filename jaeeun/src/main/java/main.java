@@ -1,6 +1,6 @@
 import useApi.GetApi;
 import wordTimer.WordTimer;
-
+import repetition.Repetition;
 import java.util.Scanner;
 
 public class main {
@@ -8,8 +8,8 @@ public class main {
     static String before = "";
     static int turn = 0;
     static GetApi api = new GetApi();
-
     static WordTimer wordTimer = new WordTimer();
+    static Repetition repeat = new Repetition();
     public static void main(String[] args) {
         System.out.print("사용자의 수를 입력해주세요: ");
         int playerNum = sc.nextInt();
@@ -26,7 +26,7 @@ public class main {
             System.out.println(playerList[turn] + "(" + points[turn] + ") 님의 차례: ");
 
             String word = wordTimer.startTimer(); // 타이머 시작 및 입력 대기
-
+            repeat.addWord(before); //나온 단어 리스트에 추가
             // 입력 처리
             if (wordTimer.isTimeOut()) {
                 System.out.println("실패: 입력이 없습니다.");
@@ -45,16 +45,12 @@ public class main {
                 points[turn] += word.length();
             } else {
                 boolean isValid = validCheck(word);
-                /*
-                *
-                *
-                * 여기얌 ㅋ
-                *
-                *
-                *
-                *
-                */
-                if (!isValid) {
+                if (repeat.isRepeated(word)){
+                    System.out.println(playerList[turn] + "님 이미 나온 단어를 입력하셨습니다!");
+                    points[turn] -= 10;
+                    break;
+                }
+                else if (!isValid) {
                     System.out.println(playerList[turn] + "님 오답을 입력하셨습니다!");
                     points[turn] -= 10;
                     break;
@@ -85,7 +81,7 @@ public class main {
 
     private static boolean validCheck(String word) {
         int before_len = before.length();
-        return word.charAt(0) == before.charAt(before_len - 1) && api.validcheck(word);
+        return word.charAt(0) == before.charAt(before_len - 1) && api.validcheck(word) && !repeat.isRepeated(word);
     }
 
     private static void findWinner(int playerNum, String[] playerList, int[] points) {

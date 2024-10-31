@@ -1,7 +1,9 @@
+package repetition;
+
 import java.util.ArrayList;
-public class repetition {
+public class Repetition {
     private ArrayList<String> usedWords;
-    public repetition() {
+    public Repetition() {
         this.usedWords = new ArrayList<>();
     }
     public void addWord(String word) {
@@ -9,5 +11,10 @@ public class repetition {
     }
     public boolean isRepeated(String word) {
         return usedWords.contains(word);
+    }
+    public void printUsedWords() {
+        for (String word : usedWords) {
+            System.out.println(word);
+        }
     }
 }
