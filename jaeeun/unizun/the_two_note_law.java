@@ -1,34 +1,29 @@
-static String lastWord = ""; // 이전 단어를 저장하는 변수
-
 public boolean validCheck(String word) {
-    if (lastWord.equals("")) { // 첫 번째 단어는 바로 통과
-        lastWord = word;
-        return true;
-    }
 
-    // 이전 단어의 마지막 글자와 받침을 분리
+    // 이전 단어의 마지막 글자와 현재 단어의 첫 글자를 가져옴
     char lastChar = lastWord.charAt(lastWord.length() - 1);
     char firstChar = word.charAt(0);
 
-    // 받침이 있는 경우 받침을 무시하고 두음법칙 적용
+    // 이전 단어의 마지막 글자에 받침이 있는 경우 받침 제거
     if (hasFinalConsonant(lastChar)) {
         lastChar = removeFinalConsonant(lastChar);
     }
 
-    if ( applyInitialSoundRule(firstChar) == lastChar) {
-        lastWord = word;
-        return true;
+    // 현재 단어의 첫 글자에 받침이 있는지 확인하고 분리
+    int finalConsonantCode = 0;
+    if (hasFinalConsonant(firstChar)) {
+        finalConsonantCode = (firstChar - '가') % 28;
+        firstChar = removeFinalConsonant(firstChar);
     }
 
-    // 단어 유효성 확인
-    GetApi myword = new GetApi();
-    boolean isValid = myword.isWordExist(word);
+    // 두음법칙을 적용
+    firstChar = applyInitialSoundRule(firstChar);
 
-    if (isValid) {
-        lastWord = word;
+    // 두음법칙이 적용된 글자에 원래 받침을 다시 추가
+    if (finalConsonantCode != 0) {
+        firstChar = appendFinalConsonant(firstChar, finalConsonantCode);
     }
 
-    return isValid;
 }
 
 // 받침이 있는지 확인하는 메서드

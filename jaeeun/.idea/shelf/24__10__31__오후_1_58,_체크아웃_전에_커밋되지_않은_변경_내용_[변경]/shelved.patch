@@ -1,0 +1,170 @@
+Index: src/main/java/main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import useApi.GetApi;\r\nimport wordTimer.WordTimer;\r\n\r\nimport java.util.Scanner;\r\n\r\npublic class main {\r\n    static Scanner sc = new Scanner(System.in);\r\n    static String before = \"\";\r\n    static int turn = 0;\r\n    static GetApi api = new GetApi();\r\n\r\n    static WordTimer wordTimer = new WordTimer();\r\n    public static void main(String[] args) {\r\n        System.out.print(\"사용자의 수를 입력해주세요: \");\r\n        int playerNum = sc.nextInt();\r\n        sc.nextLine(); // 버퍼 비우기\r\n        int[] points = new int[playerNum];\r\n        String[] playerList = setPlayer(playerNum);\r\n\r\n        while (true) {\r\n            if (turn == playerNum) {\r\n                turn = 0; // 턴 순환\r\n            }\r\n\r\n            System.out.println();\r\n            System.out.println(playerList[turn] + \"(\" + points[turn] + \") 님의 차례: \");\r\n\r\n            String word = wordTimer.startTimer(); // 타이머 시작 및 입력 대기\r\n\r\n            // 입력 처리\r\n            if (wordTimer.isTimeOut()) {\r\n                System.out.println(\"실패: 입력이 없습니다.\");\r\n                break;\r\n            }\r\n\r\n            // 첫 입력 여부 체크\r\n            if (before.isEmpty()) {\r\n                if (!api.validcheck(word)) {\r\n                    points[turn] -= 10;\r\n                    System.out.println(playerList[turn] + \"님, 오답입니다!\");\r\n                    break;\r\n                }\r\n\r\n                before = word;\r\n                points[turn] += word.length();\r\n            } else {\r\n                boolean isValid = validCheck(word);\r\n\r\n                if (!isValid) {\r\n                    System.out.println(playerList[turn] + \"님 오답을 입력하셨습니다!\");\r\n                    points[turn] -= 10;\r\n                    break;\r\n                }\r\n\r\n                before = word;\r\n                points[turn] += word.length();\r\n            }\r\n\r\n            ++turn; // 턴 증가\r\n        }\r\n\r\n        System.out.println();\r\n        findWinner(playerNum, playerList, points);\r\n    }\r\n\r\n    private static String[] setPlayer(int playerNum) {\r\n        String[] playerList = new String[playerNum];\r\n        System.out.println(\"플레이어명은 영어로만 입력해주세요!\");\r\n\r\n        for (int i = 0; i < playerNum; i++) {\r\n            System.out.print((i + 1) + \"번째 플레이어: \");\r\n            playerList[i] = sc.nextLine();\r\n        }\r\n\r\n        return playerList;\r\n    }\r\n\r\n    private static boolean validCheck(String word) {\r\n        int before_len = before.length();\r\n        return word.charAt(0) == before.charAt(before_len - 1) && api.validcheck(word);\r\n    }\r\n\r\n    private static void findWinner(int playerNum, String[] playerList, int[] points) {\r\n        int max_point = -1;\r\n        int max_idx = -1;\r\n\r\n        for (int i = 0; i < playerNum; i++) {\r\n            System.out.println(playerList[i] + \"님의 점수는 \" + points[i] + \"점 입니다\");\r\n            if (points[i] > max_point) {\r\n                max_point = points[i];\r\n                max_idx = i;\r\n            }\r\n        }\r\n\r\n        if (max_idx != -1) {\r\n            System.out.println(playerList[max_idx] + \"님의 승리!!!!\");\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/main.java b/src/main/java/main.java
+--- a/src/main/java/main.java	(revision 6436a43690522c264c919e53956ba8bc6dcc4a8c)
++++ b/src/main/java/main.java	(date 1730350398741)
+@@ -46,6 +46,15 @@
+             } else {
+                 boolean isValid = validCheck(word);
+ 
++                /*
++                *
++                *
++                *
++                * 여기
++                *
++                *
++                *
++                * */
+                 if (!isValid) {
+                     System.out.println(playerList[turn] + "님 오답을 입력하셨습니다!");
+                     points[turn] -= 10;
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n    <option name=\"workspaceImportForciblyTurnedOn\" value=\"true\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 6436a43690522c264c919e53956ba8bc6dcc4a8c)
++++ b/.idea/misc.xml	(date 1730350137497)
+@@ -7,9 +7,8 @@
+         <option value="$PROJECT_DIR$/pom.xml" />
+       </list>
+     </option>
+-    <option name="workspaceImportForciblyTurnedOn" value="true" />
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"53fb1187-6a8b-481e-ba39-3e2dfcab7504\" name=\"변경\" comment=\"24.10.29 [기능 병합]&#10;&#10;1. api 정상작동 확인&#10;2. 타이머 기능 수정 필요\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/wordTimer/WordTimer.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/wordTimer/WordTimer.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$/..\" value=\"twomelody\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;MinFe4990&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/JaS-JavaStudy/wordRelay.git&quot;,\r\n    &quot;accountId&quot;: &quot;d72cbdbb-7104-4aef-9997-2e934963f596&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2njsEPGz6ug3IFXDBtU94lr0HoH\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.Example.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Test.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.TimerExample (1).executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.TimerExample (2).executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.TimerExample (3).executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.TimerExample (4).executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.TimerExample.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.main.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/SSAFY/Desktop/practice_folder/wordRelay/jaeeun&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,\r\n    &quot;애플리케이션.Example.executor&quot;: &quot;Run&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Application.main\">\r\n    <configuration name=\"Example\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"wordTimer.Example\" />\r\n      <module name=\"jaeeun\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"wordTimer.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TimerExample (2)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"wordTimer.TimerExample\" />\r\n      <module name=\"jaeeun\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"wordTimer.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TimerExample (3)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"wordTimer.TimerExample\" />\r\n      <module name=\"jaeeun\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"wordTimer.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"WordTimer\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"wordTimer.WordTimer\" />\r\n      <module name=\"jaeeun\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"wordTimer.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"WordTimer\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"wordTimer.WordTimer\" />\r\n      <module name=\"jaeeun\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"wordTimer.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"WordTimer\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"wordTimer.WordTimer\" />\r\n      <module name=\"jaeeun\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"wordTimer.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"WordTimer\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"wordTimer.WordTimer\" />\r\n      <module name=\"jaeeun\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"wordTimer.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main\" />\r\n      <module name=\"jaeeun\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.main\" />\r\n        <item itemvalue=\"Application.WordTimer\" />\r\n        <item itemvalue=\"Application.TimerExample (3)\" />\r\n        <item itemvalue=\"Application.TimerExample (2)\" />\r\n        <item itemvalue=\"Application.Example\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"애플리케이션 수준\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"디폴트 작업\">\r\n      <changelist id=\"53fb1187-6a8b-481e-ba39-3e2dfcab7504\" name=\"변경\" comment=\"\" />\r\n      <created>1729497707386</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1729497707386</updated>\r\n      <workItem from=\"1729562767811\" duration=\"72000\" />\r\n      <workItem from=\"1729816425668\" duration=\"98000\" />\r\n      <workItem from=\"1729818231366\" duration=\"1794000\" />\r\n      <workItem from=\"1729839895378\" duration=\"1544000\" />\r\n      <workItem from=\"1729916335284\" duration=\"2128000\" />\r\n      <workItem from=\"1730206021879\" duration=\"794000\" />\r\n      <workItem from=\"1730286951946\" duration=\"1829000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729820009920</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729820009920</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729820014166</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729820014166</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6436a43690522c264c919e53956ba8bc6dcc4a8c)
++++ b/.idea/workspace.xml	(date 1730350176615)
+@@ -5,9 +5,8 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="53fb1187-6a8b-481e-ba39-3e2dfcab7504" name="변경" comment="24.10.29 [기능 병합]&#10;&#10;1. api 정상작동 확인&#10;2. 타이머 기능 수정 필요">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/wordTimer/WordTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wordTimer/WordTimer.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -35,12 +34,12 @@
+     &quot;assignee&quot;: &quot;MinFe4990&quot;
+   }
+ }</component>
+-  <component name="GithubPullRequestsUISettings">{
+-  &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;https://github.com/JaS-JavaStudy/wordRelay.git&quot;,
+-    &quot;accountId&quot;: &quot;d72cbdbb-7104-4aef-9997-2e934963f596&quot;
+-  }
+-}</component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/JaS-JavaStudy/wordRelay.git",
++    "accountId": "11c09eab-34ca-4499-84cb-6436e14c2657"
++  }
++}]]></component>
+   <component name="ProjectColorInfo">{
+   &quot;customColor&quot;: &quot;&quot;,
+   &quot;associatedIndex&quot;: 7
+@@ -50,36 +49,36 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Application.Example.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.TimerExample (1).executor&quot;: &quot;Run&quot;,
+-    &quot;Application.TimerExample (2).executor&quot;: &quot;Run&quot;,
+-    &quot;Application.TimerExample (3).executor&quot;: &quot;Run&quot;,
+-    &quot;Application.TimerExample (4).executor&quot;: &quot;Run&quot;,
+-    &quot;Application.TimerExample.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SSAFY/Desktop/practice_folder/wordRelay/jaeeun&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+-    &quot;애플리케이션.Example.executor&quot;: &quot;Run&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.Example.executor": "Run",
++    "Application.Test.executor": "Run",
++    "Application.TimerExample (1).executor": "Run",
++    "Application.TimerExample (2).executor": "Run",
++    "Application.TimerExample (3).executor": "Run",
++    "Application.TimerExample (4).executor": "Run",
++    "Application.TimerExample.executor": "Run",
++    "Application.main.executor": "Run",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "git-widget-placeholder": "develop",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/SSAFY/Desktop/practice_folder/wordRelay/jaeeun",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "프로젝트",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.0",
++    "settings.editor.selected.configurable": "build.tools",
++    "vue.rearranger.settings.migration": "true",
++    "애플리케이션.Example.executor": "Run"
+   }
+-}</component>
+-  <component name="RunManager" selected="Application.main">
++}]]></component>
++  <component name="RunManager" selected="애플리케이션.Example">
+     <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="wordTimer.Example" />
+       <module name="jaeeun" />
+@@ -178,15 +177,6 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <recent_temporary>
+-      <list>
+-        <item itemvalue="Application.main" />
+-        <item itemvalue="Application.WordTimer" />
+-        <item itemvalue="Application.TimerExample (3)" />
+-        <item itemvalue="Application.TimerExample (2)" />
+-        <item itemvalue="Application.Example" />
+-      </list>
+-    </recent_temporary>
+   </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
