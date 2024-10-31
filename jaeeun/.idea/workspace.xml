@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53fb1187-6a8b-481e-ba39-3e2dfcab7504" name="변경" comment="24.10.29 [기능 병합]&#10;&#10;1. api 정상작동 확인&#10;2. 타이머 기능 수정 필요">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gukgeon/repetition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,8 +76,6 @@
     "애플리케이션.Example.executor": "Run",
     "애플리케이션.main.executor": "Run"
   }
-}]]></component>
-  <component name="RunManager">
     <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="wordTimer.Example" />
       <module name="jaeeun" />
