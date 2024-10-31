@@ -88,4 +88,17 @@ public class two_node {
                 return firstChar;
         }
     }
+    public char forCheckTwo(char lastChar) {
+
+        char twomelodychar;
+        if (hasFinalConsonant(lastChar)) {//받침이 있는지?
+            char lastCharNoUnder = removeFinalConsonant(lastChar);//있으면 받침 제거
+            twomelodychar=applyInitialSoundRule(lastCharNoUnder);// 제거 후 두음법칙 적용
+            twomelodychar = appendFinalConsonant(twomelodychar,(lastChar - '가') % 28);// 다시 받침 추가
+        }else{
+            twomelodychar=applyInitialSoundRule(lastChar);// 받침 없으면 두음법칙 확인
+        }
+        return twomelodychar;
+        // 만일 받아온 값이 그대로면 두음법칙 없다. 다르면 두음법칙 있다.
+    }
 }
