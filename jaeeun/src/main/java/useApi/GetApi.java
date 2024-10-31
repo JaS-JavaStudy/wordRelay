@@ -10,9 +10,12 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class GetApi {
+
     private final String key = myapi.clientId;
+
     private String url ="";
-    private two_node twoNode = new two_node();
+
+    private final two_node twoNode = new two_node();
 
     private void resetUrl(String word){
         url = "https://opendict.korean.go.kr/api/search?certkey_no=6977";
@@ -81,12 +84,9 @@ public class GetApi {
         }
     }
     public boolean validcheck(String word) {
-        char twoMelody=twoNode.forApi(word.charAt(word.length()-1));;
+        char twoMelody=twoNode.forCheckTwo(word.charAt(word.length()-1));;
         // 만일 받아온 값이 그대로면 두음법칙 없다. 다르면 두음법칙 있다.
-        System.out.println(twoMelody);
-        System.out.println(word.charAt(word.length()-1));
-        if (twoMelody==word.charAt(word.length()-1)){
-            // 없으면 그대로
+        if (twoMelody==word.charAt(word.length()-1)){// 없으면 그대로
             if (isWordExist(word) && isNextWordExist(String.valueOf(word.charAt(word.length()-1)))){
                 return true;
             }

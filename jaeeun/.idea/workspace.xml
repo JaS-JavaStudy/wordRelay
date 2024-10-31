@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="106c8432-9816-4867-9c72-41c3990216e8" name="변경" comment="24.10.25 [타이머 기능]&#10;1. 타이머 기능 추가(10초)&#10;2. 사용 예시 추가">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/two_note/two_node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/two_note/two_node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/useApi/GetApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/useApi/GetApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repetition/Repetition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repetition/Repetition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/the_two_note_law.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/useApi/GetApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/useApi/GetApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/useApi/myapi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/useApi/myapi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/Example.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wordTimer/Example.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/WordTimer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wordTimer/WordTimer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/wordTimer/WordTimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wordTimer/WordTimer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,26 +19,26 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="develop" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MinFe4990"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MinFe4990&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/JaS-JavaStudy/wordRelay.git",
-    "accountId": "3654d7e3-c408-4ab3-94ed-fe4f2a7768c5"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JaS-JavaStudy/wordRelay.git&quot;,
+    &quot;accountId&quot;: &quot;3654d7e3-c408-4ab3-94ed-fe4f2a7768c5&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2oCAS25AJUzq0MBmZIimma3MINL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -56,6 +48,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop__newapi",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

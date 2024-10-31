@@ -1,7 +1,9 @@
 import useApi.GetApi;
 import wordTimer.WordTimer;
 import repetition.Repetition;
+import two_note.two_node;
 import java.util.Scanner;
+import java.util.function.DoubleToIntFunction;
 
 public class main {
     static Scanner sc = new Scanner(System.in);
@@ -10,6 +12,8 @@ public class main {
     static GetApi api = new GetApi();
     static WordTimer wordTimer = new WordTimer();
     static Repetition repeat = new Repetition();
+    static two_node twonode = new two_node();
+
     public static void main(String[] args) {
         System.out.print("사용자의 수를 입력해주세요: ");
         int playerNum = sc.nextInt();
@@ -81,7 +85,13 @@ public class main {
 
     private static boolean validCheck(String word) {
         int before_len = before.length();
-        return word.charAt(0) == before.charAt(before_len - 1) && api.validcheck(word) && !repeat.isRepeated(word);
+        char lastWordTM = twonode.forCheckTwo(before.charAt(before_len - 1));
+        char lastWord =before.charAt(before_len - 1);
+        if (lastWordTM==lastWord) {// 두음 확인하고 나온 것이랑 그냥이랑 같다.?? => 두음 없음
+            return word.charAt(0) == lastWord && api.validcheck(word) && !repeat.isRepeated(word);
+        }else{
+            return (word.charAt(0) == lastWord || word.charAt(0) == lastWordTM)&& api.validcheck(word) && !repeat.isRepeated(word);
+        }
     }
 
     private static void findWinner(int playerNum, String[] playerList, int[] points) {
